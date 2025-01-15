@@ -46,6 +46,11 @@ rock.addEventListener("click", function() {
     
 })
 
+let results = document.querySelector("#results");
+results.style.textAlign = "center";
+
+
+
 
 // function getHumanChoice() {
 //     let human = prompt("Type Rock, Paper or Scissors.").toLowerCase();
@@ -72,16 +77,25 @@ function playGame(human) {
         if(humanChoice == "paper" && computerChoice == "rock" || humanChoice == "scissors" && computerChoice == "paper" ||
         humanChoice == "rock" && computerChoice == "scissors"
         ) {
-            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            //console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            let result = document.createElement("p");
+            result.innerText = `You win! ${humanChoice} beats ${computerChoice}`;
+            results.appendChild(result);
             humanScore+=1;
     
     
         }
         else if(humanChoice == computerChoice) {
             console.log("Tie!");
+            let result = document.createElement("p");
+            result.innerText = "Tie";
+            results.appendChild(result);
         }
         else {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+            // console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+            let result = document.createElement("p");
+            result.innerText = `You lose! ${computerChoice} beats ${humanChoice}`;
+            results.appendChild(result);
             computerScore+=1;
         }
     }
@@ -118,5 +132,3 @@ function playGame(human) {
 
 
 }
-
-playGame();

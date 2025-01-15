@@ -93,6 +93,33 @@ function playGame(human) {
         computerScored.innerText = `${computerScore}`;
 
 
+         
+        if (roundCount === 5) {
+            setTimeout(() => {
+                displayFinalWinner();
+            }, 100); 
+        }
+}
+
+
+function displayFinalWinner() {
+    let finalResult = '';
+    if (humanScore > computerScore) {
+        finalResult = 'You are the final winner!';
+    } else if (humanScore < computerScore) {
+        finalResult = 'The computer is the final winner!';
+    } else {
+        finalResult = 'It\'s a tie after 5 rounds!';
+    }
+
+    
+    let finalMessage = document.createElement("p");
+    finalMessage.innerText = finalResult;
+    results.appendChild(finalMessage);
+
+   
+
+
         
     }
     

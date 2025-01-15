@@ -37,7 +37,14 @@ rock.addEventListener("click", function() {
     
 })
 
-
+rock = document.querySelector("#scissors");
+rock.addEventListener("click", function() {
+    
+    let human = "scissors";
+    playGame(human);
+    
+    
+})
 
 
 // function getHumanChoice() {

@@ -28,6 +28,15 @@ rock.addEventListener("click", function() {
     
 })
 
+rock = document.querySelector("#paper");
+rock.addEventListener("click", function() {
+    
+    let human = "paper";
+    playGame(human);
+    
+    
+})
+
 
 
 

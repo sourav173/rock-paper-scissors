@@ -117,6 +117,17 @@ function displayFinalWinner() {
     finalMessage.innerText = finalResult;
     results.appendChild(finalMessage);
 
+
+     
+     setTimeout(() => {
+        humanScore = 0;
+        computerScore = 0;
+        roundCount = 0;
+        humanScored.innerText = `${humanScore}`;
+        computerScored.innerText = `${computerScore}`;
+        results.innerHTML = ''; // Clear results
+    }, 2000); 
+
    
 
 

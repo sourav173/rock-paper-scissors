@@ -19,24 +19,37 @@ function getComputerChoice() {
 }
 
 
-
-
-function getHumanChoice() {
-    let human = prompt("Type Rock, Paper or Scissors.").toLowerCase();
-    return human;
-}
-
-
-
-
+rock = document.querySelector("#rock");
+rock.addEventListener("click", function() {
+    
+    let human = "rock";
+    playGame(human);
+    
+    
+})
 
 
 
 
-function playGame() {
+// function getHumanChoice() {
+//     let human = prompt("Type Rock, Paper or Scissors.").toLowerCase();
+//     return human;
+// }
+
+
+
+
+
+
+
+
+function playGame(human) {
     let humanScore = 0;
     let computerScore = 0;
 
+    let computer = getComputerChoice();
+    
+    playRound(human,computer);
    
 
     function playRound(humanChoice, computerChoice) {
@@ -63,26 +76,26 @@ function playGame() {
 
 
 
-    const humanSelection1 = getHumanChoice();
-    const computerSelection1 = getComputerChoice();
-    playRound(humanSelection1, computerSelection1);
+    // const humanSelection1 = getHumanChoice();
+    // const computerSelection1 = getComputerChoice();
+    // playRound(humanSelection1, computerSelection1);
 
-    const humanSelection2 = getHumanChoice();
-    const computerSelection2 = getComputerChoice();
-    playRound(humanSelection2,computerSelection2);
+    // const humanSelection2 = getHumanChoice();
+    // const computerSelection2 = getComputerChoice();
+    // playRound(humanSelection2,computerSelection2);
 
 
-    const humanSelection3 = getHumanChoice();
-    const computerSelection3 = getComputerChoice();
-    playRound(humanSelection3, computerSelection3);
+    // const humanSelection3 = getHumanChoice();
+    // const computerSelection3 = getComputerChoice();
+    // playRound(humanSelection3, computerSelection3);
 
-    const humanSelection4 = getHumanChoice();
-    const computerSelection4 = getComputerChoice();
-    playRound(humanSelection4, computerSelection4);
+    // const humanSelection4 = getHumanChoice();
+    // const computerSelection4 = getComputerChoice();
+    // playRound(humanSelection4, computerSelection4);
 
-    const humanSelection5 = getHumanChoice();
-    const computerSelection5 = getComputerChoice();
-    playRound(humanSelection5, computerSelection5);
+    // const humanSelection5 = getHumanChoice();
+    // const computerSelection5 = getComputerChoice();
+    // playRound(humanSelection5, computerSelection5);
     
     
     console.log(`Human: ${humanScore} Computer: ${computerScore}`);
